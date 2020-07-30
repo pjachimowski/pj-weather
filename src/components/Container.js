@@ -21,23 +21,26 @@ class Container extends Component {
     return (
       <div>
         <NavbarLinks />
-        <Header />
-        <div class="form__group field">
-          <input
-            type="text"
-            className="form__field"
-            placeholder="What's the weather like in ... ?"
-            name="name"
-            id="city-search"
-            required
-          />
-          <label for="city-search" className="form__label">
-          What's the weather like in ... ?
-          </label>
-        </div>
-          <Button type="submit" id="btn" variant="outline-warning">Warning</Button>{' '}
+        <main>
+          <Header />
+          <div class="form__group field">
+            <input
+              type="text"
+              className="form__field"
+              placeholder="What's the weather like in ... ?"
+              name="name"
+              id="city-search"
+              required
+            />
+            <label for="city-search" className="form__label">
+              What's the weather like in ... ?
+            </label>
+          </div>
+          
+          <Button type="submit" className="get-weather-btn" id="btn" variant="info">get weather</Button>{' '}
           <Weather searchItem={this.state.searchItem} />
-        </div>
+        </main>
+      </div>
     );
   }
 }

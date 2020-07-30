@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
   background: rgb(218, 255, 194);
   background: linear-gradient(
@@ -6,21 +8,38 @@ body {
     rgba(101, 229, 255, 1) 100%
   );
 }
+/* ----- CONTAINER ----- */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 35px;
+  border: solid 3px rgba(255, 189, 128, 0.726);
+  padding: 35px;
+  margin: 35px;
+}
+
+/* ----- HEADER ----- */
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+}
 
 /* ----- FORM ----- */
 .form__group {
   position: relative;
   padding: 15px 0 0;
-  margin-top: 10px;
+  margin-top: 25px;
   width: 50%;
 }
 .form__field {
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid #9b9b9b;
+  border-bottom: 2px solid rgb(255, 189, 128);
   outline: 0;
-  font-size: 1.3rem;
+  font-size: 35px;
   color: #fff;
   padding: 7px 0;
   background: transparent;
@@ -30,7 +49,7 @@ body {
   color: transparent;
 }
 .form__field:placeholder-shown ~ .form__label {
-  font-size: 1.3rem;
+  font-size: 15px;
   cursor: text;
   top: 20px;
 }
@@ -40,12 +59,12 @@ body {
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: #9b9b9b;
+  color: rgb(98, 98, 98);
 }
 .form__field:focus {
   padding-bottom: 6px;
   font-weight: 700;
-  border-width: 3px;
+  border-width: 4px;
   border-image: linear-gradient(to right, #11998e, #38ef7d);
   border-image-slice: 1;
 }
@@ -59,7 +78,12 @@ body {
   font-weight: 700;
 }
 /* reset input */
-.form__field:required, .form__field:invalid {
+.form__field:required,
+.form__field:invalid {
   box-shadow: none;
 }
 
+/* ----- GET WEATHER BTN ----- */
+.get-weather-btn {
+  margin-top: 15px;
+}

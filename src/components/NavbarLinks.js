@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function NavbarLinks() {
   return (
     <Navbar sticky="top" bg="light" expand="lg">
-      <Navbar.Brand>PJ-WEATHER <i class="fas fa-cloud-sun-rain"></i></Navbar.Brand>
+      <Navbar.Brand><i class="fas fa-cloud-sun-rain"></i></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
