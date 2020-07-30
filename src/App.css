@@ -4,26 +4,32 @@ body {
   background: rgb(218, 255, 194);
   background: linear-gradient(
     90deg,
-    rgba(218, 255, 194, 1) 0%,
+    rgb(201, 245, 100) 0%,
     rgba(101, 229, 255, 1) 100%
   );
 }
+
+/* ----- NAVBAR ----- */
+.navbar-links {
+  border-bottom: solid 5px rgba(255, 189, 128, 0.726);
+}
+
 /* ----- CONTAINER ----- */
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 35px;
-  border: solid 3px rgba(255, 189, 128, 0.726);
+  border: solid 5px rgba(255, 189, 128, 0.726);
   padding: 35px;
-  margin: 35px;
+  margin: 5%;
 }
 
 /* ----- HEADER ----- */
 h1 {
   font-family: 'Pacifico', cursive;
-  color: rgb(255, 255, 255);
-  font-size: 45px;
+  color: rgba(255, 189, 128, 0.726);
+  font-size: 30px;
 }
 
 /* ----- FORM ----- */
@@ -31,7 +37,7 @@ h1 {
   position: relative;
   padding: 15px 0 0;
   margin-top: 25px;
-  width: 50%;
+  width: 80%;
 }
 .form__field {
   font-family: inherit;
@@ -39,9 +45,9 @@ h1 {
   border: 0;
   border-bottom: 2px solid rgb(255, 189, 128);
   outline: 0;
-  font-size: 35px;
-  color: #fff;
-  padding: 7px 0;
+  font-size: 30px;
+  color: rgb(248, 249, 250);
+  padding: 5px 0;
   background: transparent;
   transition: border-color 0.2s;
 }
@@ -51,7 +57,7 @@ h1 {
 .form__field:placeholder-shown ~ .form__label {
   font-size: 15px;
   cursor: text;
-  top: 20px;
+  top: 50px;
 }
 .form__label {
   position: absolute;
@@ -65,7 +71,7 @@ h1 {
   padding-bottom: 6px;
   font-weight: 700;
   border-width: 4px;
-  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image: linear-gradient(to right, #11998e, #acda41);
   border-image-slice: 1;
 }
 .form__field:focus ~ .form__label {
@@ -85,5 +91,71 @@ h1 {
 
 /* ----- GET WEATHER BTN ----- */
 .get-weather-btn {
-  margin-top: 15px;
+  margin: 15px;
+}
+
+/* ----- WEATHER ----- */
+
+section {
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  grid-template-areas: 
+    "header header header"
+    "img desc desc"
+    "icon main details"
+}
+
+.welcome {
+  margin-left: 25px;
+  grid-area: header;
+  justify-self: start;
+  font-family: 'Pacifico', cursive;
+  color: rgb(248, 249, 250);
+  font-size: 55px;
+}
+
+.welcome-flag {
+  margin: 0 0 25px 25px
+}
+
+.city-img {
+  grid-area: img;
+}
+
+.wiki-city-img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.city-desc {
+  grid-area: desc;
+  padding: 0 25px;
+}
+
+.icon {
+  grid-area: icon;
+  
+}
+
+.icon img {
+  height: 150px;
+}
+
+.weather-desc {
+  grid-area: main;
+  align-self: center;
+}
+
+.weather-desc i {
+  color: rgb(248, 249, 250);
+  font-size: 60px;
+}
+
+
+.weather-details {
+  grid-area: details;
+  padding: 5px;
+  margin-bottom: 2px;
 }

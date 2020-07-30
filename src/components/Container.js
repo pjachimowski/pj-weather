@@ -23,17 +23,17 @@ class Container extends Component {
         <NavbarLinks />
         <main>
           <Header />
-          <div class="form__group field">
+          <div className="form__group field">
             <input
               type="text"
               className="form__field"
-              placeholder="What's the weather like in ... ?"
+              placeholder="Search city..."
               name="name"
               id="city-search"
               required
             />
-            <label for="city-search" className="form__label">
-              What's the weather like in ... ?
+            <label htmlFor="city-search" className="form__label">
+              Search city...
             </label>
           </div>
           

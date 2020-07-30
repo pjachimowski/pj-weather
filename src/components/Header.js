@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header () {
   return (
-    <h1> Welcome to pj-weather app</h1>
+    <h1> What's the weather like in ... ?</h1>
   );
 }
 
