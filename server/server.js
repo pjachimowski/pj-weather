@@ -3,6 +3,7 @@ const WEATHER_API_KEY = process.env.WEATHER_API_KEY
 const express = require('express');
 const request = require('request');
 const app = express();
+const cors = require('cors');
 
 function bulidURL (inputCity) {
   return `http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${WEATHER_API_KEY}`;
@@ -10,6 +11,7 @@ function bulidURL (inputCity) {
 
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
+app.use(cors());
 
 app.get('/', (req, res) => {
   const city = req.query.city;

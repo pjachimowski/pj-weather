@@ -28,6 +28,7 @@ class Weather extends Component {
   render() {
     return (
       <div>
+        <p>I am a weather</p>
         <p>{this.state.lon}</p>
       </div>
     );

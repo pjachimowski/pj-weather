@@ -9,7 +9,7 @@ class Container extends Component {
 
   componentDidMount() {
     document.querySelector('#btn').addEventListener('click', (event) => {
-      let value = document.getElementById('btn').value;
+      let value = document.getElementById('city-search').value;
       this.setState({ searchItem: value });
     });
   }
@@ -26,7 +26,7 @@ class Container extends Component {
           <input
             type="text"
             className="search-bar"
-            id="btn"
+            id="city-search"
             placeholder="Search..."
           />
           <button type="submit" id="btn">
