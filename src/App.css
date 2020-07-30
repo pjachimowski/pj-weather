@@ -136,7 +136,7 @@ section {
 
 .icon {
   grid-area: icon;
-  
+  text-align: center;
 }
 
 .icon img {
@@ -145,7 +145,9 @@ section {
 
 .weather-desc {
   grid-area: main;
-  align-self: center;
+  padding-top: 50px;
+  align-self: stretch;
+  text-align: center;
 }
 
 .weather-desc i {
@@ -153,9 +155,28 @@ section {
   font-size: 60px;
 }
 
+.weather-desc p {
+  margin-top: 25px;
+  font-size: 40px;
+} 
 
 .weather-details {
+  align-self: end;
+  padding-top: 25px;
+  font-size: 15px;
   grid-area: details;
   padding: 5px;
   margin-bottom: 2px;
+}
+
+.weather-details span {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.weather-details i {
+  color: rgb(248, 249, 250);
+  font-size: 28px;
+  margin-right: 10px;
 }

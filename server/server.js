@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
   const city = req.query.city;
   request(bulidURL(city), (err, response, body) => {
     const weatherJSON = JSON.parse(body);
-    console.log('PATTTT', weatherJSON);
     res.send(weatherJSON);
   });
 });

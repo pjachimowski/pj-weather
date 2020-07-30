@@ -48,7 +48,7 @@ class Weather extends Component {
 
   temperatureConverter = (val) => {
     let kalv = val - 273.15;
-    kalv = kalv.toFixed(1);
+    kalv = kalv.toFixed(0);
     return kalv;
   };
 
@@ -94,10 +94,10 @@ class Weather extends Component {
           <p>{this.temperatureConverter(this.state.temp)} °C </p>
         </div>
         <div className="weather-details">
-          <p>FEELS LIKE: {this.state.feels_like}</p>
-          <p>PRESSURE: {this.state.pressure}</p>
-          <p>HUMIDITY: {this.state.humidity}</p>
-          <p>WIND SPEED: {this.state.wind_speed}</p>
+          <p><i class="fas fa-feather-alt"></i> feels like <span>{this.temperatureConverter(this.state.feels_like)} °C</span></p>
+          <p><i class="fas fa-tachometer-alt"></i> pressure <span>{this.state.pressure} mbar</span> </p>
+          <p><i class="fas fa-water"></i> humidity <span>{this.state.humidity} %</span></p>
+          <p><i class="fas fa-wind"></i> wind speed <span>{this.state.wind_speed} m/sec</span></p>
         </div>
       </section>
     );
