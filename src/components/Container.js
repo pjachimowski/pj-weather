@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Weather from './Weather';
+import Button from 'react-bootstrap/Button'
 
 class Container extends Component {
   state = {
@@ -17,7 +18,7 @@ class Container extends Component {
   render() {
     return (
       <div>
-        <div> I am Container</div>
+        <div> I am Container </div>
         <Header />
 
         <Weather searchItem={this.state.searchItem} />
@@ -32,6 +33,7 @@ class Container extends Component {
           <button type="submit" id="btn">
             CLICK HERE
           </button>
+          <Button variant="outline-warning">Warning</Button>{' '}
         </div>
       </div>
     );
