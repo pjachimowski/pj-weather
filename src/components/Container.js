@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Weather from './Weather';
-import Button from 'react-bootstrap/Button'
+import NavbarLinks from './NavbarLinks';
+// react-bootstrap
+import Button from 'react-bootstrap/Button';
 
 class Container extends Component {
   state = {
@@ -18,24 +20,24 @@ class Container extends Component {
   render() {
     return (
       <div>
-        <div> I am Container </div>
+        <NavbarLinks />
         <Header />
-
-        <Weather searchItem={this.state.searchItem} />
-
-        <div className="search-box">
+        <div class="form__group field">
           <input
             type="text"
-            className="search-bar"
+            className="form__field"
+            placeholder="What's the weather like in ... ?"
+            name="name"
             id="city-search"
-            placeholder="Search..."
+            required
           />
-          <button type="submit" id="btn">
-            CLICK HERE
-          </button>
-          <Button variant="outline-warning">Warning</Button>{' '}
+          <label for="city-search" className="form__label">
+          What's the weather like in ... ?
+          </label>
         </div>
-      </div>
+          <Button type="submit" id="btn" variant="outline-warning">Warning</Button>{' '}
+          <Weather searchItem={this.state.searchItem} />
+        </div>
     );
   }
 }
