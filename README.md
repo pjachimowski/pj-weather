@@ -1,5 +1,167 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# PJ - Weather App
+...........................................................................................
+PJ - Weather App in a single page website providing weather information to the user along with short description of the query destination.
+
+It provides sets of information such as:
+- current weather description
+- temperature
+- feels-like temperature
+- pressure
+- humidity
+- wind speed
+
+User can type the name of the location into input.
+
+# UX Write up
+...........................................................................................
+## color scheme
+- Main body uses generated css gradient (via https://www.ccbg.io/)
+GREEN and LIGHT BLUE
+There colors are meant to create positive, and modern look.
+
+- Main buttons and call to action buttons:
+Used as a contrast to purple background. Eye - catcher. 
+BLUE rgb(17,153,142);
+
+## typography
+- Main titles:
+font-family: 'Quicksand'
+- Rest:
+font-family: Pacifico'
+
+## USER STORIES
+As a user, I want to learn about the weather at specific location 
+
+# FEATURES
+...........................................................................................
+### Navbar 
+Navbar is responsive and in mobile version it is changed into toggle drop down menu. Light color provides extra styling and keeps elements visable. 
+
+- Icon at the top left corner 
+- API btn
+-a link to main API used for this project  page
+- Repo btn
+-a link to github repository
+- Author drop down menu
+-a link to social media of the author of the app
+
+### In the future:
+- Better Error handling with use of already built ErrorBoundary component
+- more content
+
+
+# TESTING Write up
+...........................................................................................
+### Forms
+- all the form have validation features. all forms passed testing. 
+! card with products should accept only numbers. However, they do accept letter 'e'. This error has to be fixed later. 
+### Buttons
+- all the buttons are linked correctly and fire up successfully 
+### Payment 
+- test payment with stripe technology was performed successfully 
+### Email 
+- email sent via REVIEW form as well as REQUEST form
+- emails were received in correct form and without errors
+### Travis 
+- Travis used for automatic validation on deployed site
+### Responsivenes
+- site terted in google chrome developer tools as well as on desktop and mobile versions. All elements are responsive, the layout does not breat, elements are not overlaping. 
+### Code validation
+- Python Code tested with PEP8. Python code adheres to PEP8 standards. (http://pep8online.com/checkresult)
+    exception being E501 "line is too long"
+- HTML code tested with online validator. (https://www.freeformatter.com/html-validator.html)
+- CSS code tested with online validator (http://csslint.net/)
+    exception being "Using width with padding can sometimes make elements larger than you expect."
+
+
+# DEPLOYMENT Write up
+...........................................................................................
+My project was developed using GitPod IDE, committed to git and pushed to GitHub. Finally the code was wired up with AWS S3 where dynamic media content of shop products are stored. The following steps where taken to deploy my project.
+### From GitHub
+- Logged into GitHub.
+- Selected repository from the GitHub dashboard.
+- Clicked on "Open in GitPod button"
+- From gitpod I accessed the page via terminal coment "python3 manage.py runserver"
+### From Heroku
+- Logged into Heroku
+- Opened the pj-stickers project 
+- In Deploy panel I clicked Deploy branch
+- After the page is deployed I opened the app vie "Open App" button
+
+Website is now deployed and is available here:
+https://pj-stickers.herokuapp.com/
+My repository can be found here:
+https://github.com/pjachimowski/stickers
+
+## AWS s3
+- Media stored in AWS S3 bucket 
+- Static files and CSS sored in the project on Heroku
+
+
+# TECHNOLOGIES USED
+...........................................................................................
+### Languages
+- HTML
+- CSS
+- JavaScript
+- Python
+- django
+- Stripe payments
+
+### Libraries
+- Bootstrap (https://getbootstrap.com/)
+- Fontawesome (https://fontawesome.com/)
+
+### Database
+- AWS s3
+- local sqlite
+
+### Others
+- gradient generator CSS (www.ccbg.io)
+- Email JS (https://www.emailjs.com/)
+- Heroku cloud platform
+
+
+
+
+# Use of other code
+...........................................................................................
+- footer source(edited)  https://colorlib.com/wp/bootstrap-footer/
+
+- I use fragments of the code from previous lessons of Code Institure.
+All codes were sourced from my own profile on GitHub portal
+Parts of the code were edited and adjust to page layout.
+
+### Media
+Some stickers were downloaded for free picture collection https://www.pexels.com/
+Icons were taken from font awesome portal.
+Entire text was edited by author.
+
+
+
+# TESTING Write up
+...........................................................................................
+## HTML
+- HTML code produces NO errors on being passed through a validator.
+https://validator.w3.org/nu/ 
+
+- All the forms passed testing. All the forms featured with form validation code. 
+
+
+## Password reset
+- Password reset tested and passed successfuly. It may display following error:
+SMTPAuthenticationError at /accounts/password-reset/
+Due to google account default setups. 
+Last time updated: 01.05.2020 after which averything was working correctly. 
+
+
+### Acknowledgments
+
+- I received inspiration for this project from various lessons conducted at Sali - school of applied technology
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -26,43 +188,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

@@ -23,7 +23,7 @@ main {
   border-radius: 35px;
   border: solid 5px rgba(255, 189, 128, 0.726);
   padding: 35px;
-  margin: 5%;
+  margin: 2% 5%;
 }
 
 .no-search-result-icon {
@@ -32,7 +32,7 @@ main {
   font-size: 80px;
   margin: 80px 0;
   justify-content: space-around; 
-  background-image: linear-gradient(45deg,  rgb(216,119,74), rgb(255, 198, 91));
+  background-image: linear-gradient(45deg,  rgb(199, 101, 56), rgb(255, 198, 91));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
@@ -43,7 +43,7 @@ main {
 h1 {
   font-family: 'Pacifico', cursive;
   font-size: 30px;
-  background-image: linear-gradient(45deg,  rgb(216,119,74), rgb(255, 198, 91));
+  background-image: linear-gradient(45deg,  rgb(199, 101, 56), rgb(255, 198, 91));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
@@ -130,7 +130,6 @@ section {
 }
 
 .welcome {
-  margin-left: 25px;
   grid-area: header;
   justify-self: start;
   font-family: 'Pacifico', cursive;
@@ -139,12 +138,14 @@ section {
 }
 
 .welcome-flag {
-  margin: 0 0 25px 25px;
+  margin: 0 0 25px 15px;
 }
 
 .city-img {
+  justify-self: start;
   grid-area: img;
-}
+  margin: 0 0 15px 0;
+  }
 
 .wiki-city-img {
   border-radius: 10px;
@@ -154,9 +155,13 @@ section {
 .city-desc {
   grid-area: desc;
   padding: 0 25px;
+  margin-bottom: 20px;
 }
 
 .icon {
+  background-color: rgba(248, 249, 250, 0.404);
+  border-radius: 10px;
+  width: 98%;
   grid-area: icon;
   text-align: center;
 }
@@ -166,6 +171,9 @@ section {
 }
 
 .weather-desc {
+  background-color: rgba(248, 249, 250, 0.404);
+  border-radius: 10px;
+  width: 99%;
   grid-area: main;
   padding-top: 50px;
   align-self: stretch;
@@ -183,11 +191,14 @@ section {
 }
 
 .weather-details {
+  background-color: rgba(248, 249, 250, 0.404);
+  border-radius: 10px;
+  width: 99%;
+  padding-left: 55px; 
   align-self: end;
   padding-top: 25px;
   font-size: 15px;
   grid-area: details;
-  padding: 5px;
   margin-bottom: 2px;
 }
 

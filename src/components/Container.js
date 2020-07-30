@@ -3,8 +3,7 @@ import Header from './Header';
 import Weather from './Weather';
 import NoSearchResult from './NoSearchResult';
 import NavbarLinks from './NavbarLinks';
-import ErrorBoundry from './ErrorBoundry';
-// react-bootstrap
+import ErrorBoundary from './ErrorBoundary';
 import Button from 'react-bootstrap/Button';
 
 class Container extends Component {
@@ -25,38 +24,38 @@ class Container extends Component {
   render() {
     return (
       <div>
-        <NavbarLinks />
-        <main>
-          <Header />
-          <div className="form__group field">
-            <input
-              required
-              type="text"
-              className="form__field"
-              placeholder="Search city..."
-              name="name"
-              id="city-search"
-            />
-            <label htmlFor="city-search" className="form__label">
-              Search city...
-            </label>
-          </div>
-          <Button
-            onClick={this.clickHandler.bind(this)}
-            className="get-weather-btn"
-            id="btn"
-            variant="info"
-          >
-            get weather
-          </Button>
-          {this.state.searchInput ? (
-            <ErrorBoundry>
+        <ErrorBoundary>
+          <NavbarLinks />
+          <main>
+            <Header />
+            <div className="form__group field">
+              <input
+                required
+                type="text"
+                className="form__field"
+                placeholder="Search city..."
+                name="name"
+                id="city-search"
+              />
+              <label htmlFor="city-search" className="form__label">
+                Search city...
+              </label>
+            </div>
+            <Button
+              onClick={this.clickHandler.bind(this)}
+              className="get-weather-btn"
+              id="btn"
+              variant="info"
+            >
+              get weather
+            </Button>
+            {this.state.searchInput ? (
               <Weather searchInput={this.state.searchInput} />
-            </ErrorBoundry>
-          ) : (
-            <NoSearchResult />
-          )}
-        </main>
+            ) : (
+              <NoSearchResult />
+            )}
+          </main>
+        </ErrorBoundary>
       </div>
     );
   }

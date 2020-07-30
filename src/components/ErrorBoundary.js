@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 
-class ErrorBounary extends Component {
+class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hasError: false,
+      hasError: false
     };
   }
-  static getDerivedStateFromError(error) {
-    return {
-      hasError: true,
-    };
-  }
+
+componentDidCatch(error, info){
+  this.setState({ hasError: true });
+}
 
   render() {
     if (this.state.hasError) {
@@ -26,4 +25,4 @@ class ErrorBounary extends Component {
   }
 }
 
-export default ErrorBounary;
+export default ErrorBoundary;
