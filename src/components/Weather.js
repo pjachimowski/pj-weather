@@ -17,9 +17,9 @@ class Weather extends Component {
     wikiCitiImg: '',
   };
 
-  getDate = () => {
+  getData = () => {
     axios
-      .get(`http://localhost:5000/?city=${this.props.searchItem}`)
+      .get(`http://localhost:5000/?city=${this.props.searchInput}`)
       .then((res) => res.data)
       .then((data) => {
         this.setState({ weather: data.weather[0].main });
@@ -53,13 +53,13 @@ class Weather extends Component {
   };
 
   componentDidMount() {
-    this.getDate();
+    this.getData();
     this.getWikiCity();
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.searchItem !== prevProps.searchItem) {
-      this.getDate();
+    if (this.props.searchInput !== prevProps.searchInput) {
+      this.getData();
     }
   }
 
@@ -68,13 +68,14 @@ class Weather extends Component {
       <section>
         <div className="welcome">
           Welcome to {this.state.name}
-          <img
+          <img alt="flag of a country" 
             className="welcome-flag"
             src={`https://www.countryflags.io/${this.state.country}/shiny/48.png`}
           ></img>
         </div>
         <div className="city-img">
           <img
+          alt="panorama of the city"
             className="wiki-city-img"
             src={`${this.state.wikiCitiImg}`}
           ></img>
@@ -82,6 +83,7 @@ class Weather extends Component {
         <div className="city-desc">{this.state.wikiCiti}</div>
         <div className="icon">
           <img
+          alt="weather icon"
             src={`http://openweathermap.org/img/wn/${this.state.icon}@2x.png`}
           ></img>
           <div>
@@ -94,10 +96,10 @@ class Weather extends Component {
           <p>{this.temperatureConverter(this.state.temp)} °C </p>
         </div>
         <div className="weather-details">
-          <p><i class="fas fa-feather-alt"></i> feels like <span>{this.temperatureConverter(this.state.feels_like)} °C</span></p>
-          <p><i class="fas fa-tachometer-alt"></i> pressure <span>{this.state.pressure} mbar</span> </p>
-          <p><i class="fas fa-water"></i> humidity <span>{this.state.humidity} %</span></p>
-          <p><i class="fas fa-wind"></i> wind speed <span>{this.state.wind_speed} m/sec</span></p>
+          <p><i className="fas fa-feather-alt"></i> feels like <span>{this.temperatureConverter(this.state.feels_like)} °C</span></p>
+          <p><i className="fas fa-tachometer-alt"></i> pressure <span>{this.state.pressure} mbar</span> </p>
+          <p><i className="fas fa-water"></i> humidity <span>{this.state.humidity} %</span></p>
+          <p><i className="fas fa-wind"></i> wind speed <span>{this.state.wind_speed} m/sec</span></p>
         </div>
       </section>
     );

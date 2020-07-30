@@ -14,6 +14,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(cors());
 
 app.get('/', (req, res) => {
+  res.setHeader('Location', '/', 'Set-Cookie', 'HttpOnly;Secure;SameSite=Strict');
   const city = req.query.city;
   request(bulidURL(city), (err, response, body) => {
     const weatherJSON = JSON.parse(body);
