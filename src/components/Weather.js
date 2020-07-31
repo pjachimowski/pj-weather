@@ -89,16 +89,16 @@ class Weather extends Component {
             src={`https://www.countryflags.io/${this.state.country}/shiny/48.png`}
           ></img>
         </div>
-        
-          <div className="city-img">
-            <img
-              alt="panorama of the city"
-              className="wiki-city-img"
-              src={`${this.state.wikiCitiImg}`}
-            ></img>
-          </div>
-          <div className="city-desc">{this.state.wikiCiti}</div>
-        
+
+        <div className="city-img">
+          <img
+            alt="panorama of the city"
+            className="wiki-city-img"
+            src={`${this.state.wikiCitiImg}`}
+          ></img>
+        </div>
+        <div className="city-desc">{this.state.wikiCiti}</div>
+
         <div className="icon">
           <img
             alt="weather icon"

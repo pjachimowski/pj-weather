@@ -24,7 +24,6 @@ class Container extends Component {
   render() {
     return (
       <div>
-        <ErrorBoundary>
           <NavbarLinks />
           <main>
             <Header />
@@ -55,7 +54,6 @@ class Container extends Component {
               <NoSearchResult />
             )}
           </main>
-        </ErrorBoundary>
       </div>
     );
   }

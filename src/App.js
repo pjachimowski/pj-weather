@@ -5,7 +5,9 @@ import Container from './components/Container';
 function App() {
   return (
     <div>
-      <Container />
+      <ErrorBoundary>
+        <Container />
+      </ErrorBoundary>
     </div>
   );
 }
