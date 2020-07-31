@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # PJ - Weather App
-...........................................................................................
-PJ - Weather App in a single page website providing weather information to the user along with short description of the query destination.
+
+PJ - Weather App in a single page website providing weather information to the user along with the short description of the query destination.
 
 It provides sets of information such as:
 - current weather description
@@ -15,7 +15,7 @@ It provides sets of information such as:
 User can type the name of the location into input.
 
 # UX Write up
-...........................................................................................
+
 ## color scheme
 - Main body uses generated css gradient (via https://www.ccbg.io/)
 GREEN and LIGHT BLUE
@@ -35,7 +35,7 @@ font-family: Pacifico'
 As a user, I want to learn about the weather at specific location 
 
 # FEATURES
-...........................................................................................
+
 ### Navbar 
 Navbar is responsive and in mobile version it is changed into toggle drop down menu. Light color provides extra styling and keeps elements visable. 
 
@@ -47,120 +47,80 @@ Navbar is responsive and in mobile version it is changed into toggle drop down m
 - Author drop down menu
 -a link to social media of the author of the app
 
+### Search bar
+user input is sotore as a state in Container component and passed to Weather component as a prop. That input is used as an end point to the both OpenWeather api as well as Wiki api. 
+
+Wiki Api returns an image and short description. 
+
+OpenWeather api populate all the details of the weather as well as sends country code to a flag api and populate the name of the location in the welcome heading. 
+
+* here potential error may be that the weather api has begger database than wikipedia, names of the locations also have more veriations. Therefore, it may happen that the weather will display correct data wheras wikipedia will throw an error. 
+
 ### In the future:
 - Better Error handling with use of already built ErrorBoundary component
 - more content
+- Weather forecasts for the future days
+- Locations saved as favourite
 
 
-# TESTING Write up
-...........................................................................................
-### Forms
-- all the form have validation features. all forms passed testing. 
-! card with products should accept only numbers. However, they do accept letter 'e'. This error has to be fixed later. 
-### Buttons
-- all the buttons are linked correctly and fire up successfully 
-### Payment 
-- test payment with stripe technology was performed successfully 
-### Email 
-- email sent via REVIEW form as well as REQUEST form
-- emails were received in correct form and without errors
-### Travis 
-- Travis used for automatic validation on deployed site
 ### Responsivenes
-- site terted in google chrome developer tools as well as on desktop and mobile versions. All elements are responsive, the layout does not breat, elements are not overlaping. 
-### Code validation
-- Python Code tested with PEP8. Python code adheres to PEP8 standards. (http://pep8online.com/checkresult)
-    exception being E501 "line is too long"
-- HTML code tested with online validator. (https://www.freeformatter.com/html-validator.html)
-- CSS code tested with online validator (http://csslint.net/)
-    exception being "Using width with padding can sometimes make elements larger than you expect."
+- site terted in google chrome developer tools as well as on desktop and mobile versions. All elements are semi responsive, the layout does breat at mobile point, elements not overlaping. 
+
+* Aplication has to be adjusted to mobile version as well.
 
 
 # DEPLOYMENT Write up
-...........................................................................................
-My project was developed using GitPod IDE, committed to git and pushed to GitHub. Finally the code was wired up with AWS S3 where dynamic media content of shop products are stored. The following steps where taken to deploy my project.
+
+My project was developed using VSC IDE, committed to git and pushed to GitHub. 
+
 ### From GitHub
 - Logged into GitHub.
 - Selected repository from the GitHub dashboard.
 - Clicked on "Open in GitPod button"
-- From gitpod I accessed the page via terminal coment "python3 manage.py runserver"
-### From Heroku
-- Logged into Heroku
-- Opened the pj-stickers project 
-- In Deploy panel I clicked Deploy branch
-- After the page is deployed I opened the app vie "Open App" button
+- From VSC I accessed the page via terminal 
+ "npm start" for React app
+ "node server/server.js" from root directory for server 
 
-Website is now deployed and is available here:
-https://pj-stickers.herokuapp.com/
+
 My repository can be found here:
-https://github.com/pjachimowski/stickers
-
-## AWS s3
-- Media stored in AWS S3 bucket 
-- Static files and CSS sored in the project on Heroku
+https://github.com/pjachimowski/pj-weather
 
 
 # TECHNOLOGIES USED
-...........................................................................................
+
 ### Languages
 - HTML
 - CSS
 - JavaScript
-- Python
-- django
-- Stripe payments
 
 ### Libraries
-- Bootstrap (https://getbootstrap.com/)
+- Bootstrap-React (https://getbootstrap.com/)
 - Fontawesome (https://fontawesome.com/)
+- React
 
 ### Database
-- AWS s3
-- local sqlite
+- https://openweathermap.org/
+- https://www.countryflags.io/
+- https://en.wikipedia.org/api/rest_v1/page/summary/
 
 ### Others
 - gradient generator CSS (www.ccbg.io)
-- Email JS (https://www.emailjs.com/)
-- Heroku cloud platform
-
-
 
 
 # Use of other code
-...........................................................................................
 - footer source(edited)  https://colorlib.com/wp/bootstrap-footer/
 
-- I use fragments of the code from previous lessons of Code Institure.
+- I use fragments of the code from previous lessons Salt summer-lab.
 All codes were sourced from my own profile on GitHub portal
 Parts of the code were edited and adjust to page layout.
 
 ### Media
-Some stickers were downloaded for free picture collection https://www.pexels.com/
 Icons were taken from font awesome portal.
 Entire text was edited by author.
-
-
-
-# TESTING Write up
-...........................................................................................
-## HTML
-- HTML code produces NO errors on being passed through a validator.
-https://validator.w3.org/nu/ 
-
-- All the forms passed testing. All the forms featured with form validation code. 
-
-
-## Password reset
-- Password reset tested and passed successfuly. It may display following error:
-SMTPAuthenticationError at /accounts/password-reset/
-Due to google account default setups. 
-Last time updated: 01.05.2020 after which averything was working correctly. 
-
 
 ### Acknowledgments
 
 - I received inspiration for this project from various lessons conducted at Sali - school of applied technology
-
 
 ## Available Scripts
 
