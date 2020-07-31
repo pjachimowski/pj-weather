@@ -43,6 +43,10 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+.no-search {
+  text-align: center;
+}
+
 /* ----- HEADER ----- */
 h1 {
   font-family: 'Pacifico', cursive;
@@ -125,7 +129,6 @@ h1 {
 }
 
 /* ----- WEATHER ----- */
-
 section {
   display: grid;
   grid-template-columns: 25% 25% 50%;
@@ -164,6 +167,9 @@ section {
   grid-area: desc;
   padding: 0 25px;
   margin-bottom: 20px;
+  max-height: 250px;
+  overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 .icon {
@@ -220,4 +226,53 @@ section {
   color: rgb(248, 249, 250);
   font-size: 28px;
   margin-right: 10px;
+}
+
+/* ----- MEDIA ----- */
+@media only screen and (max-width: 600px) {
+  body {
+    background: rgb(173, 230, 178);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    padding: 15px 5px;
+    margin: 2% 5%;
+  }
+  
+  .welcome {
+    font-size: 25px;
+  }
+  .welcome-flag {
+    display: none;
+    margin: 0 0 25px 15px;
+  }
+
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .weather-desc {
+    margin: 10px 0;
+  }
+
+  .weather-details span {
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .no-search {
+    text-align: center;
+    width: 100%;
+  }
+
+  .no-search-result-icon{
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

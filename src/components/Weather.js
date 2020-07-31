@@ -55,7 +55,7 @@ class Weather extends Component {
         this.setState({ country: data.sys.country });
       })
       .catch((error) => {
-        alert('Please reftesh and provide correct city name');
+        alert('Please refresh and provide correct city name');
         console.log(error);
       });
   };
@@ -98,7 +98,7 @@ class Weather extends Component {
           ></img>
         </div>
         <div className="city-desc">{this.state.wikiCiti}</div>
-
+        <div className="fadedScroller_fade"></div>
         <div className="icon">
           <img
             alt="weather icon"

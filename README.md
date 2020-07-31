@@ -64,7 +64,7 @@ OpenWeather api populate all the details of the weather as well as sends country
 
 
 ### Responsivenes
-- site terted in google chrome developer tools as well as on desktop and mobile versions. All elements are semi responsive, the layout does breat at mobile point, elements not overlaping. 
+- site tested in google chrome developer tools as well as on desktop and mobile versions. All elements are  responsive, the layout does not break at mobile point, elements are not overlaping. 
 
 * Aplication has to be adjusted to mobile version as well.
 

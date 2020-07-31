@@ -24,36 +24,38 @@ class Container extends Component {
   render() {
     return (
       <div>
-          <NavbarLinks />
-          <main>
-            <Header />
-            <div className="form__group field">
-              <input
-                required
-                type="text"
-                className="form__field"
-                placeholder="Search city..."
-                name="name"
-                id="city-search"
-              />
-              <label htmlFor="city-search" className="form__label">
-                Search city...
-              </label>
-            </div>
-            <Button
-              onClick={this.clickHandler.bind(this)}
-              className="get-weather-btn"
-              id="btn"
-              variant="info"
-            >
-              get weather
-            </Button>
-            {this.state.searchInput ? (
+        <NavbarLinks />
+        <main>
+          <Header />
+          <div className="form__group field">
+            <input
+              required
+              type="text"
+              className="form__field"
+              placeholder="Search city..."
+              name="name"
+              id="city-search"
+            />
+            <label htmlFor="city-search" className="form__label">
+              Search city...
+            </label>
+          </div>
+          <Button
+            onClick={this.clickHandler.bind(this)}
+            className="get-weather-btn"
+            id="btn"
+            variant="info"
+          >
+            get weather
+          </Button>
+          {this.state.searchInput ? (
+            <ErrorBoundary>
               <Weather searchInput={this.state.searchInput} />
-            ) : (
-              <NoSearchResult />
-            )}
-          </main>
+            </ErrorBoundary>
+          ) : (
+            <NoSearchResult />
+          )}
+        </main>
       </div>
     );
   }

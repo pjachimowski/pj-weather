@@ -2,7 +2,7 @@ import React from 'react';
 
 function NoSearchResult() {
   return (
-    <div>
+    <div className="no-search">
       <h2> To check the weather please insert a valid name of the city :) </h2>
       <div className="no-search-result-icon">
       <i className="fas fa-cloud"></i>

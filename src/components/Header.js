@@ -1,8 +1,10 @@
 import React from 'react';
 
-function Header () {
+function Header() {
   return (
-    <h1> What's the weather like in ... ?</h1>
+    <div>
+      <h1> What's the weather like in ... ?</h1>
+    </div>
   );
 }
 
